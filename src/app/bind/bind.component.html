@@ -1,0 +1,45 @@
+<p>
+  bind works!
+</p>
+<button  (click)="doOnClick($event)">Click me!</button>
+<div>
+<img [src]="imgUrl" alt="">
+</div>
+<div>
+<img src={{imgUrl}} alt="">
+</div>
+
+<input value="Tom" (input)="doOnInput($event)">
+
+<div>
+<input [value]="name" (input)="doOnInput($event)" >{{name}}
+</div>
+<div>
+<!-- ngModel ControlValueAccessor处理默认事件 -->
+<input [(ngModel)]="name"  >{{name}}
+</div>
+<button  disabled>Click me!</button>
+<!-- disabled是html属性 不会设置false而改变 id colspan textContent -->
+
+<!-- 没有dom属性只能用html属性绑定 -->
+<table>
+	<tr>
+		<td [attr.colspan]="size">Test</td>
+	</tr>
+</table>
+
+<div class="a b c">Test1</div>
+
+<div [class]="divClass">Test2</div>
+
+
+<div class="a b" [class.c]="isBig">Test3</div>
+<!-- 类绑定 -->
+<div   [ngClass]="divClassAny">Test4</div>
+
+<!-- 样式绑定 -->
+<div [style.color]="isDev?'red':'blue'">Test5</div>
+<!-- 样式绑定 加单位-->
+<div [style.font-size.em]="isDev?'3':'1'">Test6</div>
+
+<div [ngStyle]="divStyle">Test7</div>
