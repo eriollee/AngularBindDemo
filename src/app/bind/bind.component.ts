@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bind.component.css']
 })
 export class BindComponent implements OnInit {
+  birthday:Date = new Date();
+  pai:number = 3.1415926
 
   imgUrl:string = "http://placehold.it/400x200";
 
