@@ -6,12 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BindComponent } from './bind/bind.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
+import { OrderComponent } from './order/order.component';
+import { PriceQuoteComponent } from './price-quote/price-quote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindComponent,
-    MultiplePipe
+    MultiplePipe,
+    OrderComponent,
+    PriceQuoteComponent
   ],
   imports: [
     BrowserModule,

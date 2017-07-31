@@ -1,1 +1,22 @@
-<app-bind></app-bind>
+<!-- <app-bind></app-bind> -->
+
+<div>
+	输入属性
+</div>
+<div>
+	我是父组件
+</div>
+<div>
+	<input type="text" placeholder="请输入股票代码" [(ngModel)]="stock">
+	<app-order [stockCode]="stock" [amount]="100"></app-order>
+</div>
+
+<app-price-quote (PriceChange)="priceQuetoHandler($event)"></app-price-quote>
+
+<div>父组件</div>
+<div>股票代码 来自子组件{{priceQuote.stockCode}}</div>
+<div>股票价格 来自子组件{{priceQuote.lastPrice | number : '2.2-2'}}</div>
+
+<div>中间人模式</div>
+<app-price-quote (buy)="buyHandler($event)"></app-price-quote>
+<app-order [priceQuote]="PriceQuote"></app-order>
