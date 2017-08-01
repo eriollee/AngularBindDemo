@@ -8,6 +8,8 @@ import {PriceQuote} from "./price-quote/price-quote.component"
 export class AppComponent {
   stock ="";
 
+  title ="Eriollee";
+
   priceQuote:PriceQuote = new PriceQuote("",0);
 
   priceQuetoHandler(event: PriceQuote){

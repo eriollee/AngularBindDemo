@@ -8,6 +8,7 @@ import { BindComponent } from './bind/bind.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
 import { OrderComponent } from './order/order.component';
 import { PriceQuoteComponent } from './price-quote/price-quote.component';
+import { LifeComponent } from './life/life.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PriceQuoteComponent } from './price-quote/price-quote.component';
     BindComponent,
     MultiplePipe,
     OrderComponent,
-    PriceQuoteComponent
+    PriceQuoteComponent,
+    LifeComponent
   ],
   imports: [
     BrowserModule,
