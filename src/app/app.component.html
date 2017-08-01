@@ -1,6 +1,6 @@
 <!-- <app-bind></app-bind> -->
 
-<div>
+<!-- <div>
 	输入属性
 </div>
 <div>
@@ -15,8 +15,8 @@
 
 <div>父组件</div>
 <div>股票代码 来自子组件{{priceQuote.stockCode}}</div>
-<div>股票价格 来自子组件{{priceQuote.lastPrice | number : '2.2-2'}}</div>
+<div>股票价格 来自子组件{{priceQuote.lastPrice | number : '2.2-2'}}</div> -->
 
 <div>中间人模式</div>
 <app-price-quote (buy)="buyHandler($event)"></app-price-quote>
-<app-order [priceQuote]="PriceQuote"></app-order>
+<app-order [priceQuote]="priceQuote"></app-order>

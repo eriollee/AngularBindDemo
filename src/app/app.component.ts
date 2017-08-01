@@ -13,4 +13,9 @@ export class AppComponent {
   priceQuetoHandler(event: PriceQuote){
   	this.priceQuote = event;
   }
+
+  buyHandler(event: PriceQuote){
+  	this.priceQuote = event;
+  }
+
 }
