@@ -23,7 +23,7 @@
 
 <!-- <app-life [name]="title"></app-life> -->
 
-<div class="parent">
+<!-- <div class="parent">
 	<h2>
 		我是父组件
 	</h2>
@@ -34,7 +34,9 @@
 		姓名: <input type="text" [(ngModel)]="user.name">
 	</div>
 	<app-child [greeting]="greeting" [user]="user"></app-child>
-</div>
+</div> -->
 
-<!-- <app-child #child1></app-child>
-<app-child #child2></app-child> -->
+<app-child #child1></app-child>
+<app-child #child2 ></app-child>
+<button (click)="child2.greetingMethod('jerry')">Invoke Child2</button>
+<div>{{message}}</div>

@@ -1,4 +1,4 @@
-import { Component,ViewChild,OnInit } from '@angular/core';
+import { Component,ViewChild,OnInit ,AfterViewInit,AfterContentChecked} from '@angular/core';
 import {PriceQuote} from "./price-quote/price-quote.component" 
 import {ChildComponent} from "./child/child.component" 
 
@@ -7,14 +7,16 @@ import {ChildComponent} from "./child/child.component"
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit,AfterViewInit,AfterContentChecked {
   
-/*  @ViewChild("child1")
-  child1:ChildComponent;*/
+  @ViewChild("child1")
+  child1:ChildComponent;
 
   stock ="";
 
   title ="Eriollee";
+
+  message:string;
 
   greeting:string = "hello";
 
@@ -30,7 +32,25 @@ export class AppComponent implements OnInit {
   	this.priceQuote = event;
   }
   ngOnInit():void{
-  	/*this.child1.greetingMethod("Eriollee");*/
+/*  	setInterval(
+  		()=>{
+			this.child1.greetingMethod("Eriollee");
+  		},5000
+  	);
+  */ 
+  }
+
+  ngAfterViewInit():void{
+  	setTimeout(
+  		()=>{
+			this.message = "Eriollee"
+  		},0
+  	);
+  	console.log("appcomponent ngAfterViewInit");
+  }
+
+  ngAfterContentChecked():void{
+  	console.log("appcomponent ngAfterContentChecked");
   }
 
 }
