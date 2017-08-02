@@ -9,6 +9,7 @@ import { MultiplePipe } from './pipe/multiple.pipe';
 import { OrderComponent } from './order/order.component';
 import { PriceQuoteComponent } from './price-quote/price-quote.component';
 import { LifeComponent } from './life/life.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LifeComponent } from './life/life.component';
     MultiplePipe,
     OrderComponent,
     PriceQuoteComponent,
-    LifeComponent
+    LifeComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
