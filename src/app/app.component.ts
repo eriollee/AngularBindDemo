@@ -16,6 +16,8 @@ export class AppComponent implements OnInit,AfterViewInit,AfterContentChecked {
 
   title ="Eriollee";
 
+  divContent = "<div>Eriollee</div>";
+
   message:string;
 
   greeting:string = "hello";

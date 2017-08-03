@@ -5,3 +5,9 @@
 <div><input type="text" [(ngModel)]="message"></div>
 
 </div> -->
+<div  class="wrapper">
+	<h2>child component</h2>
+	<ng-content select=".header"></ng-content>
+	<div>div defined in child</div>
+	<ng-content select=".footer"></ng-content>
+</div>

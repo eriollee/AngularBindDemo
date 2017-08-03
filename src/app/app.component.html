@@ -36,7 +36,18 @@
 	<app-child [greeting]="greeting" [user]="user"></app-child>
 </div> -->
 
-<app-child #child1></app-child>
+<!-- <app-child #child1></app-child>
 <app-child #child2 ></app-child>
 <button (click)="child2.greetingMethod('jerry')">Invoke Child2</button>
-<div>{{message}}</div>
+{{message}} -->
+
+<div class="wrapper">
+	<h2>parent component</h2>
+	<div>div defined in parent component</div>
+	<app-child>
+	    <div class="header"> header parent div projection on child div {{title}}</div>
+		<div class="footer"> footer parent div projection on child div</div>
+	</app-child>	
+</div>
+
+<div [innerHTML]="divContent"></div>
