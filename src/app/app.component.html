@@ -49,5 +49,9 @@
 		<div class="footer"> footer parent div projection on child div</div>
 	</app-child>	
 </div>
-
+{{message2}}
 <div [innerHTML]="divContent"></div>
+
+<a href="" [routerLink]="['/']">child1</a>
+<a href="" [routerLink]="['/child2']">child2</a>
+<router-outlet></router-outlet>

@@ -1,11 +1,13 @@
-import { Component, OnInit ,Input,OnChanges ,SimpleChanges,DoCheck,AfterViewInit,AfterContentChecked} from '@angular/core';
+import { Component, OnInit ,Input,OnChanges ,SimpleChanges,DoCheck,AfterViewInit,
+	AfterContentChecked,AfterContentInit,AfterViewChecked,OnDestroy} from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit,AfterViewInit,AfterContentChecked {
+export class ChildComponent implements OnInit,AfterViewInit,AfterContentChecked,
+AfterContentInit,AfterViewChecked,OnDestroy {
   
   
 
@@ -27,5 +29,16 @@ export class ChildComponent implements OnInit,AfterViewInit,AfterContentChecked 
   	console.log("ChildComponents ngAfterContentChecked");
   }
   
+  ngAfterContentInit():void{
+  	console.log("ChildComponents ngAfterContentInit");
+  }
+
+  ngAfterViewChecked():void{
+  	console.log("ChildComponents ngAfterViewChecked");
+  }
+
+  ngOnDestroy():void{
+  	console.log("ChildComponents ngOnDestroy");
+  }
 
 }
