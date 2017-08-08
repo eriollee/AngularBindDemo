@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,FormArray } from '@angular/forms';
+import { FormGroup,FormControl,FormArray,FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-regist',
@@ -9,13 +9,13 @@ import { FormGroup,FormControl,FormArray } from '@angular/forms';
 export class ReactiveRegistComponent implements OnInit {
   formModel:FormGroup;
 
-  constructor() { 
-  	this.formModel = new FormGroup({
-  		username: new FormControl(),
-  		mobile:new FormControl(),
-  		passwordsGroup:new FormGroup({
-  			password:new FormControl(),
-  			pconfirm:new FormControl
+  constructor(fb:FormBuilder) { 
+  	this.formModel = fb.group({
+  		username: [''],
+  		mobile:[''],
+  		passwordsGroup:fb.group({
+  			password:[''],
+  			pconfirm:['']
   		})
   	})
   }
