@@ -1,0 +1,11 @@
+<form [formGroup]="formModel" (submit)="onSubmit()">
+	<div >
+		<div>用户名  <input  formControlName="username"  type="text"></div>
+		<div>手机号  <input  formControlName="mobile" type="text"></div>
+	</div>
+	<div  formGroupName="passwordsGroup">
+		<div>密码 <input    formControlName="password"   type="password"></div> 
+		<div>确认密码 <input   formControlName="pconfirm"    type="password"></div> 
+	</div>
+	<button type="submit">注册</button>
+</form>

@@ -14,6 +14,7 @@ import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
 
 var routerConfig: Routes =[
   {path:'',component:ChildComponent},
@@ -31,7 +32,8 @@ var routerConfig: Routes =[
     ChildComponent,
     Child2Component,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ReactiveRegistComponent
   ],
   imports: [
     BrowserModule,
