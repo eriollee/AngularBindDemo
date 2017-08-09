@@ -6,8 +6,7 @@ import { Component, OnInit ,Input,OnChanges ,SimpleChanges,DoCheck,AfterViewInit
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit,AfterViewInit,AfterContentChecked,
-AfterContentInit,AfterViewChecked,OnDestroy {
+export class ChildComponent implements OnInit {
   
   
 
@@ -21,24 +20,6 @@ AfterContentInit,AfterViewChecked,OnDestroy {
   ngOnInit() {
   }
 
-  ngAfterViewInit():void{
-  	console.log("ChildComponent ngAfterViewInit");
-  }
 
-  ngAfterContentChecked():void{
-  	console.log("ChildComponents ngAfterContentChecked");
-  }
-  
-  ngAfterContentInit():void{
-  	console.log("ChildComponents ngAfterContentInit");
-  }
-
-  ngAfterViewChecked():void{
-  	console.log("ChildComponents ngAfterViewChecked");
-  }
-
-  ngOnDestroy():void{
-  	console.log("ChildComponents ngOnDestroy");
-  }
 
 }

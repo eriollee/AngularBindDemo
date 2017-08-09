@@ -7,7 +7,7 @@ import {ChildComponent} from "./child/child.component"
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit,AfterViewInit,AfterContentChecked,AfterContentInit,AfterViewChecked {
+export class AppComponent implements OnInit,AfterViewInit {
   
   @ViewChild("child1")
   child1:ChildComponent;
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit,AfterViewInit,AfterContentChecked,Af
   	);
   	console.log("appcomponent ngAfterViewInit");
   }
-
+/*
   ngAfterContentChecked():void{
   	console.log("appcomponent ngAfterContentChecked");
   }
@@ -64,6 +64,6 @@ export class AppComponent implements OnInit,AfterViewInit,AfterContentChecked,Af
 
   ngAfterViewChecked():void{
   	console.log("appcomponent ngAfterViewChecked");
-  }
+  }*/
 
 }
