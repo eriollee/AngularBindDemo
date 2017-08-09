@@ -17,14 +17,14 @@ export class ReactiveRegistComponent implements OnInit {
   		username: ['',[Validators.required,Validators.minLength(6)]],
   		mobile:['',[mobileValidator]],
   		passwordsGroup:fb.group({
-  			password:[''],
+  			password:['',[Validators.minLength(6)]],
   			pconfirm:['']
   		},{validator:equalValidator})
   	})
   }
 
   onSubmit(){
-/*  	let isValid:boolean = this.formModel.get("username").valid;
+  	/*let isValid:boolean = this.formModel.get("username").valid;
   	console.log("username valid=="+isValid);
   	let errors:any = this.formModel.get("username").errors;
   	console.log("username errors=="+JSON.stringify(errors));*/
