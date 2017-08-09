@@ -13,5 +13,5 @@ import { FormGroup,FormControl,FormArray,FormBuilder,Validators} from '@angular/
     let pconfirm:FormControl = group.get("pconfirm") as FormControl;
     let valid:boolean = (password.value === pconfirm.value);
     console.log("equal valid:" + valid);
-    return valid? null :{equal:true};
+    return valid? null :{equal:{descxxx:"密码与确认密码不匹配"}};
   }

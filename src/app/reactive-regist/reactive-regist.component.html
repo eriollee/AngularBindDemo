@@ -10,7 +10,7 @@
 		<div>密码 <input    formControlName="password"   type="password"></div> 
 		<div [hidden]="!formModel.hasError('minlength',['passwordsGroup','password'])"> 密码最小长度是6 </div>
 		<div>确认密码 <input   formControlName="pconfirm"    type="password"></div> 
-		<div [hidden]="!formModel.hasError('equal','passwordsGroup')"> 密码和确认密码不匹配 </div>
+		<div [hidden]="!formModel.hasError('equal','passwordsGroup')"> {{formModel.getError('equal','passwordsGroup')?.desc}} </div>
 	</div>
 	<button type="submit">注册</button>
 </form>
