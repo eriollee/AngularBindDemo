@@ -1,10 +1,17 @@
 <form [formGroup]="formModel" (submit)="onSubmit()">
 	<div >
-		<div>用户名  <input  formControlName="username"  type="text"></div>
-		<div [hidden]="!formModel.hasError('required','username')">  用户名必填 </div>
-		<div [hidden]="!formModel.hasError('minlength','username')">  用户名最小长度是6 </div>
+		<div>用户名  <input [class.hasError]="formModel.get('username').invalid&&formModel.get('username').touched" formControlName="username"  type="text"></div>
+		<div [hidden]="formModel.get('username').valid||formModel.get('username').untouched">
+			<div [hidden]="!formModel.hasError('required','username')">  用户名必填 </div>
+			<div [hidden]="!formModel.hasError('minlength','username')">  用户名最小长度是6 </div>
+		</div>
 		<div>手机号  <input  formControlName="mobile" type="text"></div>
-		<div [hidden]="!formModel.hasError('mobile','mobile')"> 手机号不匹配 </div>
+		<div [hidden]="formModel.get('mobile').valid||formModel.get('mobile').pristine">
+			<div [hidden]="!formModel.hasError('mobile','mobile')"> 手机号不匹配 </div>
+		</div>
+		<div [hidden]="!formModel.get('mobile').pending">
+			正在校验手机号
+		</div>
 	</div>
 	<div  formGroupName="passwordsGroup">
 		<div>密码 <input    formControlName="password"   type="password"></div> 
