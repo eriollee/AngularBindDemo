@@ -15,6 +15,8 @@ import { Child2Component } from './child2/child2.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
+import { MobileValidatorDirective } from './directives/mobile-validator.directive';
+import { EqualValidatorDirective } from './directives/equal-validator.directive';
 
 var routerConfig: Routes =[
   {path:'',component:ChildComponent},
@@ -33,7 +35,9 @@ var routerConfig: Routes =[
     Child2Component,
     TemplateFormComponent,
     ReactiveFormComponent,
-    ReactiveRegistComponent
+    ReactiveRegistComponent,
+    MobileValidatorDirective,
+    EqualValidatorDirective
   ],
   imports: [
     BrowserModule,
