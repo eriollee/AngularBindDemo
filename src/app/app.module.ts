@@ -17,6 +17,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.component';
 import { MobileValidatorDirective } from './directives/mobile-validator.directive';
 import { EqualValidatorDirective } from './directives/equal-validator.directive';
+import { ProductComponent } from './product/product.component';
 
 var routerConfig: Routes =[
   {path:'',component:ChildComponent},
@@ -37,7 +38,8 @@ var routerConfig: Routes =[
     ReactiveFormComponent,
     ReactiveRegistComponent,
     MobileValidatorDirective,
-    EqualValidatorDirective
+    EqualValidatorDirective,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
