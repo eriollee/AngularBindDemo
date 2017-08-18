@@ -18,6 +18,8 @@ import { ReactiveRegistComponent } from './reactive-regist/reactive-regist.compo
 import { MobileValidatorDirective } from './directives/mobile-validator.directive';
 import { EqualValidatorDirective } from './directives/equal-validator.directive';
 import { ProductComponent } from './product/product.component';
+import { WebSocketComponent } from './web-socket/web-socket.component';
+import { WebSocketService } from "./shared/web-socket.service";
 
 var routerConfig: Routes =[
   {path:'',component:ChildComponent},
@@ -39,7 +41,8 @@ var routerConfig: Routes =[
     ReactiveRegistComponent,
     MobileValidatorDirective,
     EqualValidatorDirective,
-    ProductComponent
+    ProductComponent,
+    WebSocketComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,7 @@ var routerConfig: Routes =[
     RouterModule.forRoot(routerConfig),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [WebSocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
